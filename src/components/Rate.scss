@@ -1,0 +1,159 @@
+@import '../variables';
+
+article{
+  margin-top: 64px;
+  h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: $text-primary;
+   margin-bottom: 24px;
+  }
+  .chart{
+    display: grid;
+    grid-template-areas: 
+    'Y graphic'
+    'space X '
+    ;
+    grid-template-rows: 300px 56px;
+    grid-template-columns: 48px 592px;
+
+
+    .graphic{
+      grid-area: graphic;
+
+      .grid{
+        display: flex;
+        flex-direction: column;
+        gap: 96px;
+        position: absolute;
+      }
+      .bars{
+        border: 1px solid $graphic-elements ;
+        opacity: 25%;
+        width: 600px;
+      }
+      
+      .line{
+        position: absolute;
+      }
+    }
+    .Y{
+      grid-area: Y;
+      
+
+      h4{
+        font-size: 12px;
+        color:#334155;
+        margin-bottom: 78.68px;
+      }
+    }
+    .X{
+      grid-area: X;
+      
+      margin-top: 24px;
+      display: flex;
+
+      ul{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 72.8px;
+
+        .active{
+          background-color: $highlight;
+          color: $surface-primary;
+        }
+        li{
+          padding: 4px 8px;
+          border-radius: 999px;
+          cursor: pointer;
+        }
+      }
+    }
+    .space{
+      grid-area: space;
+    }
+  }
+}
+
+@media(max-width: 800px) {
+  article{
+  margin-top: 32px;
+  h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: $text-primary;
+   margin-bottom: 24px;
+  }
+  .chart{
+    display: grid;
+    grid-template-areas: 
+    'Y graphic'
+    'space X '
+    ;
+    grid-template-rows: 160px 56px;
+    grid-template-columns: 24px 256px;
+
+
+    .graphic{   
+      grid-area: graphic;
+
+      .grid{
+        display: flex;
+        flex-direction: column;
+        gap: 51px;
+      }
+      .bars{
+        border: 1px solid $graphic-elements ;
+        opacity: 25%;
+        width: 255px;
+      }
+      
+      .line{
+        width: 255px;
+        height: 160px;
+      }
+      .chart{
+        width: 255px;
+        height: 160px;
+      }
+      
+    }
+    .Y{
+      grid-area: Y;
+      
+
+      h4{
+        font-size: 12px;
+        color:  #334155;
+        margin-bottom: 32px;
+      }
+    }
+    .X{
+      grid-area: X;
+      display: flex;
+
+      ul{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 11.2px;
+
+        .active{
+          background-color: $highlight;
+          color: $surface-primary;
+        }
+        li{
+          padding: 4px 8px;
+          border-radius: 999px;
+          cursor: pointer;
+          font-size: 12px;
+        }
+      }
+    }
+    .space{
+      grid-area: space;
+    }
+  }
+}
+}

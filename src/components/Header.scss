@@ -1,0 +1,150 @@
+@import '../variables';
+
+header{
+  margin-top: 64px;
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  option{
+    font-size: 16px;
+  }
+
+  .converter{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  
+  .select-bar{
+      width: 0px;
+      height: 24px;
+      border: 1px solid #94A3B8;
+      position: absolute;
+      margin-left: 162px;
+      z-index: 3;
+      
+
+  }
+    .currency1{
+      display: flex;
+      align-items: center;
+    
+    .coin{
+      position: absolute;
+      margin-left: 16px;
+    }
+      
+    
+      .flags{
+        position: absolute;
+        margin-left: 180px;
+        z-index: 3;
+      }
+      .arrow{
+        position: absolute;
+        margin-left: 248px;
+        z-index: 0;
+      }
+      input{
+        width: 162px;
+        padding: 14px 0 14px 30px;
+        border-radius: 8px 0 0 8px;
+        border: none;
+        border-bottom: 1px solid $graphic-elements;
+        border-left: 1px solid $graphic-elements;
+        border-top: 1px solid $graphic-elements;
+        appearance: none;
+        outline: none;
+        font-size: 16px;
+
+      }
+      select{
+        padding: 0 0 0px 50px;
+        border-radius: 0 8px 8px 0;
+        border: none;
+        appearance: none;
+        outline: none;
+        z-index: 2;
+        background: none;
+        height: 50px;
+        width: 126px;
+        border-bottom: 1px solid $graphic-elements;
+        border-right: 1px solid $graphic-elements;
+        border-top: 1px solid $graphic-elements;
+
+        
+        
+        &:focus-within{
+          background-color: $surface-secondary;
+          border-bottom: 1px solid $highlight;
+          border-right: 1px solid $highlight;
+          border-top: 1px solid $highlight;
+        }
+
+      }
+
+    }
+
+    .currency2{
+      display: flex;
+      align-items: center;
+      
+      .flags{
+        position: absolute;
+        margin-left: 180px;
+        z-index: 3;
+      }
+      .select-bar{
+        margin-left: 166px;
+      }
+      .input-area{
+        width: 166px;
+        padding: 14px 0 14px 16px;
+        border-bottom: 1px solid $graphic-elements;
+        border-left: 1px solid $graphic-elements;
+        border-top: 1px solid $graphic-elements;
+        border-radius: 8px 0 0 8px;
+      }
+        select{
+        padding: 0 0 0px 50px;
+        border-radius: 0 8px 8px 0;
+        border: none;
+        appearance: none;
+        outline: none;
+        z-index: 2;
+        background: none;
+        height: 50px;
+        width: 126px;
+        border-bottom: 1px solid $graphic-elements;
+        border-right: 1px solid $graphic-elements;
+        border-top: 1px solid $graphic-elements;
+
+        
+          &:focus{
+            background-color: $surface-secondary;
+            border-bottom: 1px solid $highlight;
+            border-right: 1px solid $highlight;
+            border-top: 1px solid $highlight;
+          }
+        }
+      }
+    }
+  }
+  h1{
+    font-weight: 600;
+    color: $text-primary;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+  }
+
+@media(max-width: 800px) {
+  header{
+    margin-top: 16px;
+  }
+  .converter{
+    flex-direction: column;
+  }
+}
